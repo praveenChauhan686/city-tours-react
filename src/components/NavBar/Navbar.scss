@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.logo-img {
+  border-radius: 50%;
+  padding: 5px;
+  width: 110px;
+  background-color: orange;
+}
+
+.navbar {
+  background: $mainBlack;
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr; // auto will not let the size shrink or grow.
+}
+
+.nav-links {
+  align-self: center; //align all the href links into center
+  list-style-type: none; //removes the dot of the lists(links)
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); //1fr makes all the links distributed equally
+  text-align: center;
+}
+
+.nav-link {
+  color: $mainGrey;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $mainGreen;
+  }
+}
+
+.active {
+  color: $mainGreen;
+}
